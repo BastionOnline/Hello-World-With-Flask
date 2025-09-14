@@ -10,7 +10,6 @@ def hello_world():
 
 
 def open_browser():
-    # time.sleep(3)  # wait a second
     webbrowser.open_new("http://127.0.0.1:8000/")
 
 if __name__ == '__main__':  # Run the app
