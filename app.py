@@ -1,13 +1,6 @@
 from flask import Flask, render_template
 import webbrowser
 import threading
-# import time
-# import os
-
-# Ensure Flask runs in production mode
-# os.environ['FLASK_ENV'] = 'production'
-# os.environ['WERKZEUG_RUN_MAIN'] = 'true'  # suppress reloader warning
-
 
 app = Flask(__name__)   #  Create a Flask app instance
 
@@ -21,8 +14,6 @@ def open_browser():
     webbrowser.open_new("http://127.0.0.1:8000/")
 
 if __name__ == '__main__':  # Run the app
-    # webbrowser.open_new("http://127.0.0.1:8000/")  # Open in a new tab/window
-    # app.run(debug=True) # Enable debug mode for development
     threading.Thread(target=open_browser).start()
     app.run(port=8000) # Enable debug mode for development
 
